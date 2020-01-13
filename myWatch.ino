@@ -148,6 +148,9 @@ void displayCurrentTime() {
   }
 
   switch(RTC_DateStruct.WeekDay) {
+    case 0:
+      weekDay = "Sun";
+      break;
     case 1:
       weekDay = "Mon";
       break;
@@ -165,9 +168,6 @@ void displayCurrentTime() {
       break;
     case 6:
       weekDay = "Sat";
-      break;
-    case 7:
-      weekDay = "Sun";
       break;
     default:
       weekDay = "ERR";
